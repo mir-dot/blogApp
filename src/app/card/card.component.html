@@ -1,0 +1,25 @@
+
+
+<div class="h-screen w-screen flex items-center justify-center" >
+    <div class="rounded-xl shadow-xl ">
+        <img class="w-full rounded-t-xl h-36 object-cover " [src]="data.mainImageUrl">
+        <div class="p-6">
+            <div class="flex  flex-row ">
+                <div class = "uppercase text-xs text-white px-2 py-1 rounded-xl"
+                [class] ="
+                data.categoryColor === '1' 
+                ? 'bg-green-500' 
+                : data.categoryColor === '2' ?
+                'bg-blue-500'
+                : 'bg-yellow-500'
+                " >                 
+                    {{data.category}}
+                </div>
+            </div>
+            <h5 class="text-2xl mr-2 font-bold">
+                {{data.title}}
+            </h5>
+            <p class="mt-2 text-gray-600">{{data.description}}</p>
+        </div>
+    </div>
+</div>
